@@ -6,10 +6,23 @@ import time
 # asking user if they want to play again
 
 def display_intro():
-
+	print ('''Standing at the mouth of a cave you take one long inhale 
+and you exhale as you pass through the threshold.
+The cave up ahead  forks but both paths are damp, seeming to breathing, and onimnious. ''')
 
 def choose_a_cave():
+	cave = ""
+	while cave != '1' and cave  != '2':
+		print ("Do you go left or right?(1,2)")
+		cave = input()
 
-def check_cave():
+	return cave
 
-def play_again():
+#def check_cave():
+
+#def play_again():
+
+
+
+display_intro()
+choose_a_cave()

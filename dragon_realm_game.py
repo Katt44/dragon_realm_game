@@ -12,16 +12,16 @@ The cave up ahead  forks but both paths are damp, seeming to breathing, and onim
 
 def choose_a_cave():
 	cave = ""
-	print ("Do you go left or right?(1,2)")
-
 	
-#	while cave != '1' and cave  != '2': # what does this mean
-#		print ("Do you go left or right?(1,2)")
-#		cave = input()
+
+	# i need help here
+	while cave != '1' and cave  != '2': # what does this mean
+		cave = raw_input(("Do you go left or right?(1,2)"))
+#		
 
 	return cave
 
-def check_cave():
+def check_cave(chosen_cave):
 	print (" The once narrow cave expands sharply..")
 	time.sleep(2)
 	print ("In the pitch black, you feel a rush of hot foul smelling air hit you.. ")
@@ -31,14 +31,16 @@ def check_cave():
 	friendly_cave = random.randint(1,2)
 
 	if chosen_cave == str(friendly_cave):
-		print(" dragon scene1 ")
+		print(" dragon likes you ")
 	else:
-		print ("dragon scene2")
+		print ("dragon eats you")
 
 #def play_again():
 
 
-
-display_intro()
-choose_a_cave()
-check_cave()
+play_again = "yes"
+while play_again == "yes" or play_again == "y":
+	display_intro()
+	cave_number = choose_a_cave()
+	check_cave(cave_number)
+	play_again =raw_input("Do you want to play again?(yes or no)")

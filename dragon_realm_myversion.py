@@ -14,12 +14,22 @@ def choose_a_cave():
 	
 
 def check_cave(chosen_cave):
+	print (" The once narrow cave expands sharply..")
+	time.sleep(2)
+	print ("In the pitch black, you feel a rush of hot foul smelling air hit you.. ")
+	time.sleep(2)
 
-
+	friendly_cave = random.choice(['right','left'])
+	if chosen_cave == friendly_cave:
+		print  "The dragon finds you and falls in love with you"
+	else:
+		print "The starving dragon sees you and drools. It lunges toward you and eats you"
 
 
 #call functions
-def play_dragon_realm()
+def play_dragon_realm():
 	display_intro()
-	choose_a_cave()
-	check_cave()
+	cave = choose_a_cave()
+	check_cave(cave)
+
+play_dragon_realm()
